@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: dimgray;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>favorite.html</h1>
+    <form action="/task/favorite" method="post">
+        좋아하는 색깔은 ? : <input type="text" name="color">
+        좋아하는 숫자는 ? :<input type="text" name="number">
+        <button>입력</button>
+    </form>
+
+    <h2 th:text="${color}"></h2>
+    <h2 th:text="${number}"></h2>
+
+
+</body>
+</html>

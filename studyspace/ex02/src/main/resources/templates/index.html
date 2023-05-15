@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<h1>공부를 하쟈!!</h1>
+<form action="/ex/01" method="get">
+  이름입력 : <input type="text" name="memberName">
+  나이입력 : <input type="text" name="memberAge">
+  <button type="submit">회원추가</button>
+</form>
+
+<form action="/ex/02" method="get">
+  조회할 회원번호 : <input type="text" name="memberNumber">
+  <button type="submit">회원조회</button>
+</form>
+<div th:if="${isNull}">
+  <h3>해당 회원은 존재하지 않습니다.</h3>
+</div>
+
+
+
+
+
+</body>
+</html>

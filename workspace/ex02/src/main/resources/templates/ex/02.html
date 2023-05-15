@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: dimgray;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>02.html입니다.</h1>
+<!--    gender, id, password-->
+    <div th:object="${memberDto}">
+        <h3 th:text="'아이디 : ' + *{id}"></h3>
+        <h3 th:text="'비밀번호 : ' + *{password}"></h3>
+        <h3 th:text="'성별 : ' + *{gender}"></h3>
+    </div>
+</body>
+</html>

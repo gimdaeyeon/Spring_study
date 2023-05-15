@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: dimgray;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>03.html 입니다!!!!</h1>
+<!--    jstl <c:out value="${}"/>-->
+<!--    타임리프는 태그안에 속성을 사용하여 값을 넣어준다.-->
+    <h3 th:text="${memberDto.name}"></h3>
+    <h3 th:text="${memberDto.age}"></h3>
+    <h2 th:text="${memberDto.name}+'님의 나이는 '+${memberDto.age}+'살 입니다.' "></h2>
+
+    <div th:object="${memberDto}">
+        <h3 th:text="*{name}"></h3>
+        <h3 th:text="*{age}"></h3>
+        <h2 th:text="*{name}+'님의 나이는 '+ *{age}+'살 입니다.' "></h2>
+    </div>
+
+
+    <h3 th:text="${id2}"></h3>
+
+
+
+</body>
+</html>

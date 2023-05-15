@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div th:object="${memberDto}">
+  <h3 th:text="'회원번호 : '+ *{memberNumber}"></h3>
+  <h3 th:text="'회원이름 : '+ *{memberName}"></h3>
+  <h3 th:text="'회원나이 : '+ *{memberAge}"></h3>
+</div>
+<a href="/">메인화면</a>
+
+</body>
+</html>

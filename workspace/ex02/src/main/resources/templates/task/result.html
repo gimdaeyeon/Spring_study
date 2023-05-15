@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body{
+      background-color: dimgray;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+<h1>result.html</h1>
+
+<table>
+  <tr>
+    <th>이름</th>
+    <th>수학</th>
+    <th>영어</th>
+    <th>국어</th>
+    <th>총점</th>
+    <th>평균</th>
+  </tr>
+
+  <tr th:object="${studentDto}">
+    <td th:text="*{name}"></td>
+    <td th:text="*{math}"></td>
+    <td th:text="*{eng}"></td>
+    <td th:text="*{kor}"></td>
+    <td th:text="${total}"></td>
+    <td th:text="${avg}"></td>
+  </tr>
+</table>
+
+
+<div th:object="${studentDto}">
+  <h2 th:text="'학생이름 : '+ *{name}"></h2>
+  <h2 th:text="'국어점수 : '+ *{kor}"></h2>
+  <h2 th:text="'영어점수 : '+ *{eng}"></h2>
+  <h2 th:text="'수학점수 : '+ *{math}"></h2>
+  <h2 th:text="'총점 : '+ ${total}"></h2>
+  <h2 th:text="'평균 : '+ ${avg}"></h2>
+</div>
+
+</body>
+</html>
