@@ -88,6 +88,35 @@ public class BasicController {
         return "basic/attribute";
     }
 
+    @GetMapping("each")
+    public void each(Model model){
+        addUsers(model);
+    }
+
+    @GetMapping("condition")
+    public void condition(Model model){
+        addUsers(model);
+    }
+
+    @GetMapping("comments")
+    public void comments(Model model){
+        model.addAttribute("data","Spring!");
+    }
+
+    @GetMapping("block")
+    public void block(Model model){
+        addUsers(model);
+    }
+
+    private void addUsers(Model model){
+        List<User> list = List.of(
+                new User("UserA", 10),
+                new User("UserB", 20),
+                new User("UserC", 30)
+        );
+        model.addAttribute("users",list);
+    }
+
     @Data
     @AllArgsConstructor
     static class User {
