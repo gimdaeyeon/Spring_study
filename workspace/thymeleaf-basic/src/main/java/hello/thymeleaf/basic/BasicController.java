@@ -108,6 +108,12 @@ public class BasicController {
         addUsers(model);
     }
 
+    @GetMapping("javascript")
+    public void javascript(Model model){
+        model.addAttribute("user",new User("UserA",10));
+        addUsers(model);
+    }
+
     private void addUsers(Model model){
         List<User> list = List.of(
                 new User("UserA", 10),
