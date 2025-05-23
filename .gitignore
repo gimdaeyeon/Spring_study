@@ -152,7 +152,7 @@ gradle-app.setting
 resource/
 *.exe
 
-application.properties
-*.properties
+#application.properties
+#*.properties
 
 *.yml
