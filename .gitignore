@@ -156,3 +156,5 @@ resource/
 #*.properties
 
 *.yml
+
+.DS_Store
