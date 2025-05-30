@@ -5,8 +5,10 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;
+import org.hibernate.validator.constraints.ScriptAssert;
 
 @Data
+//@ScriptAssert(lang = "javascript",script = "_this.price * _this.quantity >= 100000", message = "총합이 10000원 넘게 입력해 주세요")
 public class Item {
 
     private Long id;
